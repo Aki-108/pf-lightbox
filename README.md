@@ -8,3 +8,4 @@ Extention for [pillowfort.social](https://www.pillowfort.social/) that adds a li
 4. Save with Ctrl+S or through the menus.
 
 Note: This extention only loads reliably when the tab is focused. Opening a tab in the background won't work.
+Tested on Firefox for Windows 10.
