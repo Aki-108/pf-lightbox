@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Lightbox
-// @version      1.0
+// @version      1.1
 // @description  Adds a lightbox to Pillowfort.social.
 // @author       aki108
 // @match        https://www.pillowfort.social/*
@@ -15,13 +15,14 @@
     'use strict';
 
     /* Initialize */
-    var loadingIndicator = document.getElementById("home_loading") || document.getElementById("blog_loading") || document.getElementsByClassName("comments-container")[0];//document.getElementById("comments_loading");
+    var loadingIndicator = document.getElementById("home_loading") || document.getElementById("blog_loading") || document.getElementById("comments_loading");
+    var commentContainer = document.getElementsByClassName("comments-container")[0];
     var styleObserver = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutationRecord) {
             if (loadingIndicator.style.display == "none") {//for home-feed and blogs
                 loadImgs();
-            } else if (loadingIndicator.classList.contains("comments-container")) {//for single posts
-                loadImgs();
+            }
+            if (commentContainer) {//for single posts
                 loadComments();
             }
         });
@@ -29,7 +30,11 @@
     if (loadingIndicator) {
         styleObserver.observe(loadingIndicator, {
             attributes: true,
-            attributeFilter: ["style"],
+            attributeFilter: ["style"]
+        });
+    }
+    if (commentContainer) {
+        styleObserver.observe(commentContainer, {
             childList: true
         });
     }
