@@ -5,8 +5,8 @@
 // @author       aki108
 // @match        https://www.pillowfort.social/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=pillowfort.social
-// @updateURL    https://raw.githubusercontent.com/Aki-108/Tassel/main/extensions/Lightbox.js
-// @downloadURL  https://raw.githubusercontent.com/Aki-108/Tassel/main/extensions/Lightbox.js
+// @updateURL    https://raw.githubusercontent.com/Aki-108/pf-lightbox/main/main.js
+// @downloadURL  https://raw.githubusercontent.com/Aki-108/pf-lightbox/main/main.js
 // @supportURL   https://www.pillowfort.social/posts/2841345
 // @grant        none
 // ==/UserScript==
