@@ -1,3 +1,5 @@
+**⚠ Notice**: This extension is no longer supported. Lightbox is now part of Tassel. Use [Tassel](https://github.com/Aki-108/Tassel) instead.
+
 # pf-lightbox
 Extention for [pillowfort.social](https://www.pillowfort.social/) that adds a lightbox
 
