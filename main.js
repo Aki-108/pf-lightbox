@@ -13,6 +13,21 @@
 
 (function() {
     'use strict';
+    
+    /* Tassel Notice */
+    if (!document.getElementById("tasselModalSidebar") && localStorage.getItem("tasselUpdateNotice") == null) {
+        let toast = document.createElement("div");
+        toast.style = "height:max-content;max-width:230px;position:fixed;bottom:0;right:0;margin:20px;font-size:14px;box-shadow:0 0 5px 0 black;background:var(--postBgColor);color:var(--postFontColor);padding:10px;border-top:5px var(--linkColor) solid;cursor:pointer;line-height:1.2em;";
+        toast.innerHTML = `
+        <h6 style="font-weight:bold;line-height:1em;margin-bottom:4px;">Notice</h6>
+        <span>Lightbox is no longer supported as a stand-alone extension. It is now part of the extension manager Tassel. Please install Tassel to use Lightbox in the future.<br>Learn more by clicking this message.</span>
+        `;
+        toast.addEventListener("click", function() {
+            localStorage.setItem("tasselUpdateNotice", 0);
+            window.open("https://www.pillowfort.social/posts/3126084", '_blank');
+        });
+        document.body.appendChild(toast);
+    }
 
     /* Initialize */
     var loadingIndicator = document.getElementById("home_loading") || document.getElementById("blog_loading") || document.getElementById("comm_large_loading") || document.getElementById("search_loading") || document.getElementById("comments_loading");
