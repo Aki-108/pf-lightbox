@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Lightbox
-// @version      1.4
+// @version      1.5
 // @description  Adds a lightbox to Pillowfort.social.
 // @author       aki108
 // @match        https://www.pillowfort.social/*
